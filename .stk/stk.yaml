@@ -8,6 +8,7 @@ metadata:
   stack: web-api-net-mongo@1.0.0
 spec:
   type: app
+  app-id: 01HMS65XN5NEWW1V3RCZPN60AP
   plugins:
     - name: scofield/web-api-net-mongo@1.0.0/stk-plugin-scaffolding-api-net@1.0.1
       alias: stk-plugin-scaffolding-api-net-1705947272788
