@@ -1,0 +1,30 @@
+kind: application
+metadata:
+  description: Teste mongo
+  name: teste-mongo
+schema-version: v1
+spec:
+  applied-plugins:
+  - alias: stk-plugin-scaffolding-api-net-1705947272788
+    connections:
+      generates: []
+      requires: []
+    inputs:
+      add_controller: Sim
+      description: Teste mongo DB
+      solution_name: TesteMongoDb
+      title: mongo
+      version_net: Net 6
+    inputs-envs: {}
+    name: scofield/web-api-net-mongo@1.0.0/stk-plugin-scaffolding-api-net
+  - alias: stk-plugin-mongodb-1705947272821
+    connections:
+      generates: []
+      requires: []
+    inputs:
+      collection_name: stackspot
+      database_name: stackspotdb
+      user_db: stackspotuser
+    inputs-envs: {}
+    name: scofield/web-api-net-mongo@1.0.0/stk-plugin-mongodb
+  repository: https://github.com/dyegoscofield/teste-mongo

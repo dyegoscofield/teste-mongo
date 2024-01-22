@@ -1,0 +1,20 @@
+version: '3.2'
+services:
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: stackspotuser
+      MONGO_INITDB_ROOT_PASSWORD: w8NQntDt1RTrzst9
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: stackspotuser
+      ME_CONFIG_MONGODB_ADMINPASSWORD: w8NQntDt1RTrzst9
+      ME_CONFIG_MONGODB_URL: mongodb://stackspotuser:w8NQntDt1RTrzst9@mongo:27017/

@@ -1,0 +1,55 @@
+schema-version: v2
+kind: manifest
+metadata:
+  name: teste-mongo
+  description: Teste mongo
+  starter: scofield/web-api-net-mongo@1.0.0/net-mongo
+  stack-version-id: 01HMS5PZ6YAA4739Y1AFFTRQDQ
+  stack: web-api-net-mongo@1.0.0
+spec:
+  type: app
+  plugins:
+    - name: scofield/web-api-net-mongo@1.0.0/stk-plugin-scaffolding-api-net@1.0.1
+      alias: stk-plugin-scaffolding-api-net-1705947272788
+      plugin-version-id: 01HKQCTM4TSV5A3GZCQ0WC9MC8
+      stack-version-id: 01HMS5PZ6YAA4739Y1AFFTRQDQ
+      type: app
+      inputs:
+        version_net: Net 6
+        solution_name: TesteMongoDb
+        description: Teste mongo DB
+        title: mongo
+        add_controller: Sim
+      inputs-envs: {}
+      connections:
+        generates: []
+        requires: []
+      links:
+        generates: []
+    - name: scofield/web-api-net-mongo@1.0.0/stk-plugin-mongodb@1.0.0
+      alias: stk-plugin-mongodb-1705947272821
+      plugin-version-id: 01HMS4TKEV4VDW7B3FNTCQBZFD
+      stack-version-id: 01HMS5PZ6YAA4739Y1AFFTRQDQ
+      type: app
+      inputs:
+        database_name: stackspotdb
+        collection_name: stackspot
+        user_db: stackspotuser
+      inputs-envs: {}
+      connections:
+        generates: []
+        requires: []
+      links:
+        generates: []
+  global-inputs:
+    version_net: Net 6
+    solution_name: TesteMongoDb
+    description: Teste mongo DB
+    title: mongo
+    add_controller: Sim
+    entrypoint: TesteMongoDb.Api
+    repositorypath: /src/TesteMongoDb.Api/TesteMongoDb.Api.csproj
+  global-computed-inputs:
+    entrypoint: TesteMongoDb.Api
+    solution_name: TesteMongoDb
+  repository: https://github.com/dyegoscofield/teste-mongo
